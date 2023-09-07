@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #75b2ce, #eda4d8, #a8c6d2, #f0a9dc, #afd9d5 );
+}
+
+.formulario {
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background: rgba(255, 255, 255, 0.97);
+}
+
+.imgLogo {
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  /*border: 1px solid rgba(109, 86, 10, 0.7);*/
+}
+
+.formulario__titulo,
+.formulario__subtitulo,
+.formulario__parrafo {
+  text-align: center;
+  margin-top: 0;
+}
+.formulario__titulo,
+.formulario__subtitulo {
+  color: rgba(0, 0, 0, 0.7);
+}
+.formulario__parrafo {
+  color: rgba(0, 0, 0, 0.5);
+}
+.formulario__input,
+.formulario__label {
+  display: block;
+  width: 100%;
+  font-size: 1, 3em;
+}
+.formulario__input {
+  padding: 10px;
+  background: transparent;
+  /* puedo colocar otro color pero con transparencia asi: background: rgba(0,0,0,0.1) porque sino no se ven las label, aunque ya no es necesario porque ya no estan sobre los input y ademas le quite el z-index*/
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.formulario__input:focus {
+  /*outline: 1px solid rgba(0,0,0,0.7);*/
+  outline: none;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+}
+/*.formulario__input:focus + .formulario__label{
+    margin-top: -120px;
+}*/
+.formulario__label {
+  padding-left: 15px;
+  /*position: absolute;*/
+  /*margin-top: -78px;*/
+  /*z-index: -20;*/
+  color: rgba(0, 0, 0, 0.7);
+  /*transition: all 0.2s;*/
+  margin: 2px;
+}
+.formulario__submit {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  display: block;
+  width: 50%;
+  font-size: 1, 3em;
+}
+
+/*Centrar los campos del formulario (Los input y el boton de Enviar al WhatsApp, que tambien es un input)*/
+
+.formulario__input,
+.formulario__submit {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*.fijar {
+    margin-top: -120px;
+} */
+
+/* respuesta del formulario */
+#respuesta {
+  width: 100%;
+  height: 50px;
+  margin: 5px;
+  padding: 5px;
+}
+#respuesta.fail {
+  color: red;
+}
+#respuesta.send {
+  color: green;
+}
+
+/* Estilo para el botón "Calcular" */
+#calcularTarifa {
+  background-color: #ffa112; /* Color de fondo */
+  color: #070707; /* Color del texto */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+#calcularTarifa:hover {
+  background-color: #a8c6d2; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo para el botón "Enviar por WhatsApp" */
+#enviarWhatsApp {
+  background-color: #ffa112; /* Color de fondo */
+  color: #080808; /* Color del texto */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+#enviarWhatsApp:hover {
+  background-color: #a8c6d2; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #333; /* Color de fondo del pie de página */
+  color: #fff; /* Color del texto en el pie de página */
+  padding: 20px;
+  text-align: center;
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+  
+}
+
+.redes-sociales {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.redes-sociales li {
+  display: inline-block;
+  margin-right: 10px; /* Espacio entre los iconos */
+}
+
+.redes-sociales a {
+  display: block;
+  width: 40px; /* Ancho de los iconos */
+  height: 40px; /* Altura de los iconos */
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px; /* Tamaño del icono */
+  color: #fff; /* Color del icono (blanco en este ejemplo) */
+  border-radius: 50%; /* Para crear un círculo */
+  text-decoration: none; /* Quitar subrayado de enlace */
+}
+
+.redes-sociales .facebook {
+  background-color: #1877F2; /* Color de fondo de Facebook */
+}
+
+.redes-sociales .twitter {
+  background-color: #1DA1F2; /* Color de fondo de Twitter */
+}
+
+.redes-sociales .instagram {
+  background-color: #E4405F; /* Color de fondo de Instagram */
+}
+ 

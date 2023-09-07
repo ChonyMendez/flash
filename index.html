@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Flash Pack Envíos - Envíos Low Cost">
+  <title>Flash Pack Envíos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header>
+    <nav>
+      <img src="flash.png" alt="Logo de Flash Pack" title="Flash Pack Logo" class="imgLogo">
+      <h1 class="formulario__titulo">Flash Pack</h1>
+    </nav>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main>
+    <form action="" class="formulario">
+      <h3 class="formulario__subtitulo">Envíos Low Cost</h3>
+      <p class="formulario__parrafo">
+        ¡Bienvenido! Creamos este simple formulario donde podrás cargar tus datos para tus pedidos o envíos.
+      </p>
+
+      <!-- Origen del Envío -->
+      <h3 class="formulario__subtitulo">Origen del Envío (Desde Donde?)</h3>
+      <label for="cliente" class="formulario__label">Nombre y Apellido / Empresa</label>
+      <input id="cliente" type="text" class="formulario__input" placeholder="Ej. Jose Rivero  / Rivero S.A." />
+
+      <label for="direccion_origen" class="formulario__label">Dirección de Origen</label>
+      <input id="direccion_origen" type="text" class="formulario__input" placeholder="Escribe tu dirección de origen" />
+
+      <label for="infoadicional" class="formulario__label">Info Adicional / Entre Calles</label>
+      <input id="infoadicional" type="text" class="formulario__input"
+        placeholder=" Ej. Casa Azul / Frente a la plaza" />
+
+      <label for="piso" class="formulario__label">Piso - Dpto. / Manzana - Lote</label>
+      <input id="piso" type="text" class="formulario__input" placeholder=" Ej. Piso 5 Dpto. B" />
+
+      <label for="celular" class="formulario__label">Telefono Celular</label>
+      <input id="celular" type="text" class="formulario__input" placeholder=" Ej. 3513498469 (sin 0 y sin el 15)" />
+
+      <!-- ... (otros campos de origen) -->
+
+      <label for="fecha" class="formulario__label">Fecha de Retiro</label>
+      <input id="fecha" type="date" class="formulario__input" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+
+      <label for="hora" class="formulario__label">Hora de Retiro</label>
+      <input id="hora" type="time" class="formulario__input" />
+
+      <!-- Destino del Envío -->
+      <h3 class="formulario__subtitulo">Destino del Envío (Hasta Donde?)</h3>
+      <label for="cliente1" class="formulario__label">Nombre y Apellido / Empresa</label>
+      <input id="cliente1" type="text" class="formulario__input" placeholder="Ej. Maria Sanchez  / Sanchez S.A." />
+
+      <label for="direccion_destino" class="formulario__label">Dirección de Destino</label>
+      <input id="direccion_destino" type="text" class="formulario__input"
+        placeholder="Escribe tu dirección de destino" />
+
+      <label for="infoadicional1" class="formulario__label">Info Adicional / Entre Calles</label>
+      <input id="infoadicional1" type="text" class="formulario__input"
+        placeholder=" Ej. Casa verde / Frente a la rotonda" />
+
+      <label for="piso1" class="formulario__label">Piso - Dpto. / Manzana - Lote</label>
+      <input id="piso1" type="text" class="formulario__input" placeholder=" Ej. Manzana 8 Lote 20" />
+
+      <label for="celular1" class="formulario__label">Telefono Celular</label>
+      <input id="celular1" type="text" class="formulario__input" placeholder=" Ej. 3543310308 (sin 0 y sin el 15)" />
+
+      <!-- ... (otros campos de destino) -->
+
+      
+      <!-- Respuesta (Distancia y Precio) -->
+      <div id="respuesta">
+        <p><h3 class="formulario__subtitulo">Tarifa por km $100:
+           <span id="distancia">100</span></h3></p>
+      </div>
+      <div>
+        <p><h3 class="formulario__subtitulo">Tarifa Base $250: 
+          <span id="precio">250</span></h3></p>
+      </div>
+
+      <!-- ... (otros campos del formulario) -->
+      <tr>
+
+      </tr>
+      
+
+      <button id="calcularTarifa" class="formulario__submit" type="button">Calcular Tarifa</button>
+
+      <!-- Tarifa -->
+      <div id="tarifa-estimada">
+        <p> <h3 class="formulario__subtitulo">Tarifa Estimada
+           $<span id="tarifa">0.00</span></h3></p>
+      </div>
+      <p class="formulario__parrafo">
+        La tarifa estimada se calculará automáticamente en función de la distancia.
+      </p>
+
+     
+      <!-- ... (otros elementos del formulario) -->
+
+      
+
+     <button id="enviarWhatsApp" class="formulario__submit" type="button">Enviar por WhatsApp</button>
+
+    </form>
+
+    <!-- Mapa de autocompletado de direcciones -->
+    <div id="map"></div>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer>
+    <ul class="redes-sociales">
+      <li><a href="https://www.facebook.com/tupagina" class="facebook" rel="noopener" title="Visita nuestra página de Facebook"></a></li>
+      <li><a href="https://twitter.com/tupagina" class="twitter" rel="noopener" title="Visita nuestra página de Twitter"></a></li>
+      <li><a href="https://www.instagram.com/tupagina" class="instagram" rel="noopener" title="Visita nuestra página de Instagram"></a></li>
+    </ul> <!-- Agregar iconos en png para cada red social -->
+  </footer>
+  
+
+    <!-- Agrega los enlaces a las redes sociales con sus íconos correspondientes -->
+  <!-- Información de contacto o pie de página aquí -->
+  
+
+  <!-- Script JavaScript -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWx3XjZD6gHtktm-t22d3JnziRz8io0Oc&libraries=places"></script>
+  <script src="form.js"></script>
+</body>
+
+</html>
